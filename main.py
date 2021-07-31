@@ -70,13 +70,13 @@ with open('data.json') as data_file:
         altitude = baro.read_altitude()
         sealevel_pressure = baro.read_sealevel_pressure()
         daytime = datetime.datetime.now(tz.gettz('MDT')).ctime()
-
-        print 'Temp = {0:0.2f} *C'.format(temp)
+        print("Temp = {0:0.2f} *C".format(temp))
         temp = (temp*1.8) + 32
-        print 'Temp = {0:0.2f} *F'.format(temp)
-        print 'Pressure = {0:0.2f} Pa'.format(baro.read_pressure())
-        print 'Altitude = {0:0.2f} m'.format(baro.read_altitude())
-        print 'Sealevel Pressure = {0:0.2f} Pa'.format(baro.read_sealevel_pressure())
+        print("Temp = {0:0.2f} *F".format(temp))
+        print("Pressure = {0:0.2f} Pa".format(baro.read_pressure()))
+        print("Altitude = {0:0.2f} m".format(baro.read_altitude()))
+        print("Sealevel Pressure = {0:0.2f} Pa".format(baro.read_sealevel_pressure()))
+
 
         output = {
             "moisture_1": moisture1,
